@@ -1,16 +1,19 @@
 {
   "name": "enzyme-dive",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "license": "MIT",
   "repository": "https://github.com/jackall3n/enzyme-dive.git",
   "homepage": "https://github.com/jackall3n/enzyme-dive",
   "scripts": {
+    "clean": "rimraf ./lib",
+    "prebuild": "yarn clean",
     "build": "tsc"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.4",
+    "rimraf": "^3.0.0",
     "typescript": "^3.7.5"
   },
   "dependencies": {
