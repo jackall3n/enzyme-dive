@@ -21,6 +21,25 @@ configure(Enzyme.ShallowWrapper);
 
 ## Usage
 
+### diveTo(selector)
+Use this to dive until you reach your component. This can be useful if you've got many HoC wrappers.
+```typescript
+import React from 'react';
+import { shallow } from "enzyme";
+import Component from './Component';
+import ChildComponent from './ChildComponent';
+
+describe('<Component />', function() {
+  it("should render child", () => {
+      const wrapper = shallow(<Component />).diveTo(ChildComponent);
+
+      expect(wrapper).toMatchSnapshot();
+  });
+});
+```
+---
+### deepDive(depth)
+Dive through your nodes a specified amount 
 ```typescript
 import React from 'react';
 import { shallow } from "enzyme";
