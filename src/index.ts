@@ -1,9 +1,6 @@
-import { ShallowWrapper } from "enzyme";
-import { DeepDive } from "./extensions/deepDive";
-
 declare module "enzyme" {
-  interface ShallowWrapper {
-    deepDive: DeepDive;
+  interface ShallowWrapper<P = {}> {
+    deepDive(dives?: number): ShallowWrapper<P>;
   }
 }
 

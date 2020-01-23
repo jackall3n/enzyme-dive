@@ -1,11 +1,7 @@
-import { ShallowWrapper } from 'enzyme';
+import * as enzyme from 'enzyme';
 
-export interface DeepDive {
-  (dives?: number): ShallowWrapper;
-}
-
-export function deepDive(ShallowWrapper: ShallowWrapper) {
-  (ShallowWrapper as any).prototype.deepDive = function deepDive(dives: number = 1) {
+export function deepDive(ShallowWrapper: typeof enzyme.ShallowWrapper) {
+  ShallowWrapper.prototype.deepDive = function deepDive(dives: number = 1) {
     let _this = this;
 
     for (let d = 0; d < dives; d++) {
