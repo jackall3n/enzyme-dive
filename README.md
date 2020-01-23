@@ -34,6 +34,4 @@ describe('<Component />', function() {
       expect(wrapper).toMatchSnapshot();
   });
 });
-
-
 ```
