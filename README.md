@@ -7,7 +7,7 @@
 yarn add enzyme-dive --dev
 ```
 
-#### 2. Extend Ezyme in your setup file
+#### 2. Extend Enzyme in your setup file
 ```typescript
 import * as Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-xx';
