@@ -3,7 +3,7 @@ import { Component } from "react";
 
 declare module "enzyme" {
   interface ShallowWrapper<P = {}> {
-    deepDive(dives?: number): ShallowWrapper<P>;
+    diveDeep(depth?: number): ShallowWrapper<P>;
 
     diveTo<P2>(statelessComponent: StatelessComponent<P2>, maxDepth?: number): ShallowWrapper<P2, never>;
     diveTo<P2>(component: ComponentType<P2>, maxDepth?: number): ShallowWrapper<P2, any>;

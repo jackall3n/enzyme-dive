@@ -38,7 +38,7 @@ describe('<Component />', function() {
 });
 ```
 ---
-### deepDive(depth)
+### diveDeep(depth)
 Dive through your nodes a specified amount 
 ```typescript
 import React from 'react';
