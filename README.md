@@ -48,7 +48,7 @@ import Component from './Component';
 describe('<Component />', function() {
   it("should render", () => {
       // const wrapper = shallow(<Component />).dive().dive().dive().dive().dive();
-      const wrapper = shallow(<Component />).deepDive(5);
+      const wrapper = shallow(<Component />).diveDeep(5);
 
       expect(wrapper).toMatchSnapshot();
   });
